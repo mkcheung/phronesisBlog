@@ -3,7 +3,10 @@ let path = require("path");
 let bodyParser = require("body-parser");
  
 let app = express();
-app.use(express.static(path.join(__dirname,"/html")));
+
+const DIST_DIR = path.join(__dirname, '../dist'); // NEW
+const HTML_FILE = path.join(DIST_DIR, 'index.html'); // NEW
+app.use(express.static(DIST_DIR));
 app.use(bodyParser.json());
 
 
