@@ -1,5 +1,6 @@
 import React, { Component }  from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 import SignUp from './SignUp';
 
@@ -38,7 +39,6 @@ class SignIn extends React.Component {
     }
 
     render() {
-        console.log('signin');
         return (
             <div>
                 <form className="form-signin">
