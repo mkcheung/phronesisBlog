@@ -13,6 +13,8 @@ app.use(bodyParser.json());
 app.post('/signin', function(req, res) {
 	let user_name=req.body.email;
 	let password=req.body.password;
+
+	console.log('inside body parser method');
 	if(user_name=='admin' && password=='admin'){
 		res.send('success');
 	} else{

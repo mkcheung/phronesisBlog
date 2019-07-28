@@ -24,14 +24,11 @@ class SignIn extends React.Component {
     }
 
     signIn = async () => {
-        console.log(this.state.email);
-        console.log(this.state.password);
         try {
             const response = await axios.post('/signin', {
               email: this.state.email,
               password: this.state.password
             });
-            console.log(response);
 
         } catch(error) {
             alert(error);
@@ -52,7 +49,7 @@ class SignIn extends React.Component {
                     </button>
                 </form>
                 <div>
-                    <Link to="/signup">{SignUp}</Link>
+                    <Link to="/signup">{'Sign Up'}</Link>
                 </div>
             </div>
         )
